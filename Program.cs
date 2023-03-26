@@ -15,7 +15,7 @@ int elements(string[] array, int size)
     int k=0;
     for(int i=0; i<size; i++)
     {
-        if(array[i].Length<3)
+        if(array[i].Length<4)
         {
             k++;
         }
@@ -29,7 +29,7 @@ string[] newArray(string[] array, int num)
     int k=0;
     for(int i=0; i<array.Length; i++)
     {
-        if(array[i].Length<=2)
+        if(array[i].Length<=3)
         {
             mas[k]=array[i];
             k++;
@@ -51,5 +51,5 @@ int razmer=Convert.ToInt16(Console.ReadLine());
 string[] masive=createArray(razmer);
 int newRazmer=elements(masive, razmer);
 string[] newMasive=newArray(masive, newRazmer);
-Console.WriteLine("Новый массив, где размерность элементов меньше 2");
+Console.WriteLine("Новый массив, где размерность элементов меньше или равно 3");
 printArray(newMasive);
